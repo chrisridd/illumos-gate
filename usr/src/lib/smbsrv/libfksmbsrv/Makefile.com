@@ -22,7 +22,7 @@
 # Copyright 2008 Sun Microsystems, Inc.  All rights reserved.
 # Use is subject to license terms.
 #
-# Copyright 2014 Nexenta Systems, Inc.  All rights reserved.
+# Copyright 2015 Nexenta Systems, Inc.  All rights reserved.
 #
 
 LIBRARY =	libfksmbsrv.a
@@ -205,7 +205,7 @@ LINTCHECKFLAGS += -erroff=E_INCONS_VAL_TYPE_USED2
 
 LDLIBS +=	$(MACH_LDLIBS)
 LDLIBS +=	-lfakekernel -lidmap -lcmdutils
-LDLIBS +=	-lavl -lnvpair -lnsl -lpkcs11 -lreparse -lc
+LDLIBS +=	-lavl -lnvpair -lnsl -lmd -lpkcs11 -lreparse -lc
 
 CPPFLAGS += $(INCS) -D_REENTRANT -D_FAKE_KERNEL
 CPPFLAGS += -D_FILE_OFFSET_BITS=64

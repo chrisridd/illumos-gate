@@ -136,20 +136,28 @@ smb_sign_begin(smb_request_t *sr, smb_token_t *token)
 	 */
 	if (token->tkn_ssnkey.val == NULL || token->tkn_ssnkey.len == 0)
 		return (0);
+<<<<<<< HEAD
 
 	/*
 	 * Session-level initialization (once per session)
 	 */
 	smb_rwx_rwenter(&session->s_lock, RW_WRITER);
+=======
+>>>>>>> 2db7342... NEX-3591 SMB3 signing
 
 	/*
 	 * Signing may already have been setup by a prior logon,
 	 * in which case we're done here.
 	 */
+<<<<<<< HEAD
 	if (sign->mackey != NULL) {
 		smb_rwx_rwexit(&session->s_lock);
 		return (0);
 	}
+=======
+	if (sign->mackey != NULL)
+		return (0);
+>>>>>>> 2db7342... NEX-3591 SMB3 signing
 
 	/*
 	 * Get the mech handle
@@ -193,7 +201,10 @@ smb_sign_begin(smb_request_t *sr, smb_token_t *token)
 			sign->flags |= SMB_SIGNING_CHECK;
 	}
 
+<<<<<<< HEAD
 	smb_rwx_rwexit(&session->s_lock);
+=======
+>>>>>>> 2db7342... NEX-3591 SMB3 signing
 	return (0);
 }
 

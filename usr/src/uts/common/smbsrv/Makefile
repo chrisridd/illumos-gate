@@ -60,6 +60,7 @@ HDRS=	alloc.h			\
 	smbinfo.h		\
 	smb2.h			\
 	smb2_kproto.h		\
+	smb2_signing.h		\
 	string.h		\
 	svrapi.h		\
 	winioctl.h		\
